@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahrain Grand Prix 2026 | Independent Reseller</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #15151E; color: white; font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; line-height: 1.5; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Compliance Banner - Always visible at top */
+        .compliance-banner { background: #000; border-bottom: 3px solid #E8002D; padding: 16px 20px; font-size: 1rem; color: #fff; position: sticky; top: 0; z-index: 1000; }
+        .compliance-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px; text-align: center; }
+        .compliance-badge { background: #E8002D; color: white; padding: 8px 16px; font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
+        
+        /* Navbar */
+        .navbar { background: rgba(21,21,30,0.98); padding: 15px 20px; border-bottom: 2px solid #E8002D; position: sticky; top: 60px; z-index: 100; display: flex; justify-content: space-between; align-items: center; max-width: 100%; }
+        .logo { font-weight: 900; font-size: 1.5rem; font-style: italic; }
+        .text-red { color: #E8002D; }
+        .btn-cart { background: #E8002D; color: white; border: none; padding: 12px 24px; font-weight: 700; cursor: pointer; font-size: 1rem; }
+        .btn-cart:hover { background: #c0001f; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, rgba(10,10,10,0.85), rgba(10,10,10,0.5)), url("https://i.ibb.co/Jjzk0ngZ/01jz0ppftyp3m7bn54h4.webp") center/cover; padding: 120px 20px; text-align: center; }
+        .hero-date { border: 1px solid #E8002D; display: inline-block; padding: 5px 15px; margin-bottom: 20px; background: rgba(232,0,45,0.1); font-weight: 700; }
+        .hero h1 { font-size: 3rem; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #ccc; margin-bottom: 20px; }
+        .hero-warning { font-size: 0.9rem; color: #ff6b6b; margin-bottom: 30px; }
+        .trust-badges { display: flex; justify-content: center; gap: 20px; margin-top: 40px; flex-wrap: wrap; }
+        .trust-badge { background: rgba(0,0,0,0.5); padding: 10px 20px; font-size: 0.85rem; }
+        
+        /* Stats */
+        .stats { background: #E8002D; padding: 30px 20px; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 20px; }
+        .stat-val { font-size: 2rem; font-weight: 900; }
+        .stat-label { text-transform: uppercase; }
+        @media (max-width: 600px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+        
+        /* Sections */
+        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { font-size: 2.5rem; font-weight: 900; font-style: italic; text-transform: uppercase; text-align: center; margin-bottom: 40px; }
+        
+        /* Tabs */
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 50px; flex-wrap: wrap; }
+        .tab-btn { background: #2a2a35; color: white; border: none; padding: 10px 25px; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+        .tab-btn.active, .tab-btn:hover { background: #E8002D; }
+        
+        /* IMPORTANT: Price Transparency Notice - Required by Google */
+        .price-transparency-notice { background: linear-gradient(135deg, #1a1a24, #0d0d12); border: 2px solid #E8002D; padding: 25px; margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .price-transparency-title { color: #E8002D; font-weight: 700; font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .price-transparency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .price-transparency-item { background: #000; padding: 15px; border-left: 3px solid #E8002D; }
+        .price-transparency-label { color: #E8002D; font-size: 0.75rem; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .price-transparency-value { color: white; font-weight: 600; font-size: 0.95rem; }
+        .price-transparency-subtext { color: #888; font-size: 0.8rem; margin-top: 5px; }
+        
+        /* Reseller Notice Box */
+        .reseller-notice { background: rgba(255,107,107,0.1); border: 2px solid rgba(255,107,107,0.5); padding: 20px; margin-bottom: 30px; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .reseller-notice-title { color: #ff6b6b; font-weight: 700; margin-bottom: 10px; }
+        .reseller-notice-text { color: #ccc; font-size: 0.9rem; }
+        
+        /* Cards Grid */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: #1e1e26; border-top: 4px solid #E8002D; padding: 25px; position: relative; }
+        .card-badge { position: absolute; top: 0; right: 0; background: #E8002D; color: white; padding: 5px 10px; font-size: 0.75rem; font-weight: 700; }
+        .card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; }
+        
+        /* CRITICAL: Full Price Breakdown in Cards */
+        .card-price-box { background: #0a0a0f; border: 1px solid #333; padding: 20px; margin-bottom: 15px; }
+        .card-price-header { color: #E8002D; font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #222; padding-bottom: 8px; }
+        .card-price-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
+        .card-price-row .label { color: #888; }
+        .card-price-row .value { color: white; }
+        .card-price-row.fee { font-size: 0.85rem; }
+        .card-price-row.fee .label { color: #666; }
+        .card-price-row.fee .value { color: #aaa; }
+        .card-price-divider { border-top: 1px dashed #333; margin: 12px 0; }
+        .card-price-row.total { margin-top: 5px; }
+        .card-price-row.total .label { color: white; font-weight: 700; }
+        .card-price-row.total .value { color: #E8002D; font-size: 1.3rem; font-weight: 900; }
+        .card-price-note { font-size: 0.7rem; color: #666; margin-top: 10px; text-align: center; }
+        
+        .card-disclaimer { font-size: 0.75rem; color: #ff6b6b; margin-bottom: 15px; background: rgba(255,0,0,0.1); padding: 10px; display: block; text-align: center; }
+        .card-info { font-size: 0.9rem; color: #aaa; margin-bottom: 15px; }
+        .card-info div { margin-bottom: 5px; }
+        .card-info strong { color: white; }
+        .card-btn { width: 100%; background: #E8002D; color: white; border: none; padding: 14px; font-weight: 700; cursor: pointer; font-size: 1rem; }
+        .card-btn:hover { background: #c0001f; }
+        
+        /* How It Works */
+        .how-section { padding: 60px 20px; background: #15151E; }
+        .how-inner { max-width: 1000px; margin: 0 auto; }
+        .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+        .how-step { width: 50px; height: 50px; background: #E8002D; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem; font-weight: 900; }
+        .how-title { color: white; margin-bottom: 8px; text-transform: uppercase; }
+        .how-desc { color: #888; font-size: 0.9rem; }
+        
+        /* FAQ */
+        .faq-section { padding: 60px 20px; background: #1e1e26; }
+        .faq-inner { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #333; padding: 20px 0; }
+        .faq-q { color: white; margin-bottom: 10px; font-size: 1rem; font-weight: 700; }
+        .faq-a { color: #888; font-size: 0.9rem; line-height: 1.6; }
+        
+        /* Contact */
+        .contact-section { padding: 80px 20px; background: #1a1a24; }
+        .contact-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+        .contact-box { background: #111; padding: 30px; margin: 30px 0; text-align: left; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .contact-label { color: #666; font-size: 0.8rem; margin-bottom: 5px; }
+        .contact-value { color: white; }
+        
+        /* Footer */
+        .footer { background: #0a0a0a; padding: 40px 20px; border-top: 1px solid #222; }
+        .footer-inner { max-width: 1000px; margin: 0 auto; }
+        .footer-policies { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #222; }
+        .footer-policies h4 { color: #E8002D; margin-bottom: 10px; font-size: 0.9rem; }
+        .footer-policies p { font-size: 0.85rem; color: #888; line-height: 1.6; }
+        .footer-business { text-align: center; margin-bottom: 20px; font-size: 0.85rem; color: #666; }
+        .footer-business strong { color: #888; }
+        .footer-disclaimer { text-align: center; padding: 20px; background: #111; margin-bottom: 20px; border: 1px solid #333; }
+        .footer-disclaimer-title { font-size: 0.85rem; color: #E8002D; font-weight: 700; margin-bottom: 10px; }
+        .footer-disclaimer-text { font-size: 0.8rem; color: #888; line-height: 1.7; max-width: 800px; margin: 0 auto; }
+        .footer-links { text-align: center; margin-bottom: 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .footer-links button { color: #888; font-size: 0.85rem; text-decoration: underline; background: none; border: none; cursor: pointer; }
+        .footer-links button:hover { color: #E8002D; }
+        .footer-copyright { font-size: 0.8rem; color: #444; text-align: center; }
+        
+        /* Cart Overlay */
+        .cart-overlay { display: none; position: fixed; inset: 0; background: #15151E; z-index: 9999; overflow-y: auto; }
+        .cart-overlay.active { display: block; }
+        .cart-nav { background: #0a0a0f; border-bottom: 1px solid #1e1e2e; padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+        .cart-back { color: #888; background: none; border: none; cursor: pointer; font-size: 1rem; }
+        .cart-content { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
+        .cart-title { font-size: 2.5rem; font-style: italic; text-transform: uppercase; margin-bottom: 8px; }
+        .cart-subtitle { color: #555; font-size: 0.85rem; margin-bottom: 20px; }
+        
+        /* Cart Compliance Notice */
+        .cart-compliance-notice { background: rgba(232,0,45,0.1); border: 2px solid #E8002D; padding: 15px 20px; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+        .cart-compliance-icon { font-size: 1.5rem; }
+        .cart-compliance-text { flex: 1; }
+        .cart-compliance-title { color: #E8002D; font-weight: 700; font-size: 0.9rem; margin-bottom: 5px; }
+        .cart-compliance-desc { color: #ccc; font-size: 0.8rem; }
+        
+        .cart-empty { text-align: center; padding: 60px 20px; background: #1a1a2a; border: 1px solid #222; }
+        .cart-grid { display: grid; grid-template-columns: 1fr 420px; gap: 30px; align-items: start; }
+        @media (max-width: 900px) { .cart-grid { grid-template-columns: 1fr; } }
+        
+        /* Cart Items */
+        .cart-item { background: #1a1a2a; border: 1px solid #222; padding: 20px; margin-bottom: 15px; }
+        .cart-item-header { display: flex; align-items: center; gap: 16px; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #222; }
+        .cart-item-icon { width: 50px; height: 50px; background: #E8002D; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .cart-item-info { flex: 1; }
+        .cart-item-name { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; margin-bottom: 4px; }
+        .cart-item-meta { font-size: 0.75rem; color: #666; }
+        
+        /* Cart Item Price Breakdown - CRITICAL */
+        .cart-item-breakdown { background: #0d0d12; border: 1px solid #E8002D; padding: 15px; margin: 15px 0; }
+        .cart-breakdown-title { color: #E8002D; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+        .cart-breakdown-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.85rem; }
+        .cart-breakdown-row .label { color: #888; }
+        .cart-breakdown-row .value { color: white; }
+        .cart-breakdown-row.subtotal { border-top: 1px dashed #333; padding-top: 10px; margin-top: 10px; font-weight: 600; }
+        .cart-breakdown-row.subtotal .value { color: #E8002D; font-size: 1.1rem; }
+        
+        .cart-item-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 15px; }
+        .cart-item-qty { display: flex; align-items: center; gap: 10px; }
+        .qty-label { color: #888; font-size: 0.85rem; }
+        .qty-btn { width: 32px; height: 32px; background: #222; border: 1px solid #444; color: white; cursor: pointer; font-size: 1.1rem; }
+        .qty-btn:hover { background: #333; }
+        .qty-value { min-width: 40px; text-align: center; font-weight: 700; font-size: 1.1rem; }
+        .remove-btn { background: none; border: none; color: #E8002D; font-size: 0.85rem; cursor: pointer; text-decoration: underline; }
+        
+        /* Cart Summary - CRITICAL FOR GOOGLE ADS */
+        .cart-summary { background: #1a1a2a; border: 2px solid #E8002D; padding: 25px; position: sticky; top: 84px; }
+        .summary-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid #E8002D; }
+        .summary-icon { font-size: 1.5rem; }
+        .summary-title { font-size: 1.2rem; font-weight: 700; text-transform: uppercase; }
+        
+        /* GOOGLE ADS REQUIREMENT: Complete Price Specification */
+        .price-specification { background: #0a0a0f; border: 2px solid #333; padding: 20px; margin-bottom: 20px; }
+        .price-spec-header { background: #E8002D; color: white; padding: 10px 15px; margin: -20px -20px 20px -20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .price-spec-row { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 0.9rem; }
+        .price-spec-row .label { color: #aaa; }
+        .price-spec-row .value { color: white; font-weight: 500; }
+        .price-spec-row.indent { padding-left: 15px; font-size: 0.85rem; }
+        .price-spec-row.indent .label { color: #666; }
+        .price-spec-row.indent .value { color: #999; }
+        .price-spec-divider { border-top: 1px solid #333; margin: 15px 0; }
+        .price-spec-subtotal { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; }
+        .price-spec-subtotal .label { color: #888; }
+        .price-spec-subtotal .value { color: white; }
+        .price-spec-total { display: flex; justify-content: space-between; align-items: center; background: #111; padding: 15px; margin: 15px -20px -20px -20px; }
+        .price-spec-total .label { font-weight: 700; font-size: 1rem; color: white; }
+        .price-spec-total .value { font-size: 2rem; font-weight: 900; color: #E8002D; }
+        
+        /* Compliance Confirmation Box */
+        .compliance-confirm { background: rgba(255,255,255,0.05); border: 1px solid #333; padding: 15px; margin-bottom: 20px; }
+        .compliance-confirm-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 0.8rem; color: #aaa; }
+        .compliance-confirm-row:last-child { margin-bottom: 0; }
+        .compliance-check { color: #4CAF50; font-size: 1rem; }
+        
+        /* Secondary Market Warning */
+        .secondary-market-warning { background: rgba(255,107,107,0.1); border: 1px solid rgba(255,107,107,0.4); padding: 15px; margin-bottom: 20px; }
+        .warning-title { color: #ff6b6b; font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        .warning-text { color: #ccc; font-size: 0.8rem; line-height: 1.5; }
+        
+        .checkout-btn { width: 100%; background: #E8002D; color: white; border: none; padding: 18px; font-size: 1.1rem; font-weight: 900; text-transform: uppercase; cursor: pointer; letter-spacing: 0.5px; }
+        .checkout-btn:hover { background: #c0001f; }
+        .checkout-note { text-align: center; margin-top: 12px; font-size: 0.75rem; color: #666; }
+        .checkout-note strong { color: #888; }
+        
+        /* Payment Methods */
+        .payment-methods-box { background: #111; padding: 15px; margin-top: 20px; }
+        .payment-methods-title { color: #888; font-size: 0.75rem; margin-bottom: 10px; text-transform: uppercase; }
+        .payment-methods-list { display: flex; gap: 10px; flex-wrap: wrap; }
+        .payment-method { background: #222; padding: 8px 12px; font-size: 0.8rem; color: #aaa; display: flex; align-items: center; gap: 6px; }
+        
+        /* Modal */
+        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 10000; overflow-y: auto; align-items: flex-start; justify-content: center; padding: 50px 20px; }
+        .modal-overlay.active { display: flex; }
+        .modal-box { background: #1a1a24; max-width: 800px; width: 100%; padding: 40px; position: relative; }
+        .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: #E8002D; font-size: 2rem; cursor: pointer; }
+        .modal-title { font-size: 2rem; font-weight: 900; margin-bottom: 30px; color: #E8002D; }
+        .modal-content { color: #ccc; line-height: 1.8; font-size: 0.95rem; }
+        .modal-content h3 { color: white; margin-top: 25px; margin-bottom: 10px; }
+        .modal-content p { margin-bottom: 15px; }
+        .modal-content ul { margin-left: 20px; margin-bottom: 15px; }
+        .modal-content li { margin-bottom: 5px; }
+        .modal-close-btn { margin-top: 30px; background: #E8002D; color: white; border: none; padding: 12px 30px; font-weight: 700; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <!-- COMPLIANCE: Sticky Secondary Market Banner -->
+    <div class="compliance-banner">
+        <div class="compliance-inner">
+            <span class="compliance-badge">⚠️ SECONDARY MARKET</span>
+            <span><strong class="text-red">INDEPENDENT RESELLER</strong> — We are NOT affiliated with Formula 1®, FIA, or Bahrain International Circuit. Prices may be above or below face value.</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">BAHRAIN <span class="text-red">GP</span></div>
+        <button class="btn-cart" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-date">10 - 11 - 12 APRIL 2026</div>
+        <h1>BAHRAIN GRAND PRIX 2026</h1>
+        <p>Experience the thrill of the desert night race with premium grandstand seats.</p>
+        <p class="hero-warning">⚠️ Independent reseller · Secondary market · Prices may differ from face value</p>
+        <button class="btn-cart" onclick="document.getElementById('seats-section').scrollIntoView({behavior: 'smooth'})">VIEW SEATS & PRICES</button>
+        <div class="trust-badges">
+            <div class="trust-badge">✓ 100% Seat Guarantee</div>
+            <div class="trust-badge">✓ Secure Payment</div>
+            <div class="trust-badge">✓ E-Voucher Delivery</div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div><div class="stat-val">57</div><div class="stat-label">Laps</div></div>
+        <div><div class="stat-val">5.412</div><div class="stat-label">KM Circuit</div></div>
+        <div><div class="stat-val">NIGHT</div><div class="stat-label">Race</div></div>
+        <div><div class="stat-val">LIMITED</div><div class="stat-label">Availability</div></div>
+    </div>
+
+    <!-- Seat Options -->
+    <section class="section" id="seats-section">
+        <h2 class="section-title">GRANDSTAND <span class="text-red">OPTIONS</span></h2>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="filterTabs('all', this)">ALL SEATS</button>
+            <button class="tab-btn" onclick="filterTabs('grandstand', this)">GRANDSTAND</button>
+        </div>
+
+        <!-- COMPLIANCE: Secondary Market Notice -->
+        <div class="reseller-notice">
+            <div class="reseller-notice-title">⚠️ SECONDARY MARKET RESELLER</div>
+            <div class="reseller-notice-text">We are an independent reseller. We are NOT the official vendor and NOT affiliated with Formula 1®, FIA, or Bahrain International Circuit. All prices shown are resale prices and may be above or below the original face value.</div>
+        </div>
+
+        <!-- COMPLIANCE: Price Transparency Notice -->
+        <div class="price-transparency-notice">
+            <div class="price-transparency-title">📋 PRICING INFORMATION — READ BEFORE PURCHASING</div>
+            <div class="price-transparency-grid">
+                <div class="price-transparency-item">
+                    <div class="price-transparency-label">Price Structure</div>
+                    <div class="price-transparency-value">Seat Price + 15% Service Fee</div>
+                    <div class="price-transparency-subtext">Full breakdown shown on each option</div>
+                </div>
+                <div class="price-transparency-item">
+                    <div class="price-transparency-label">What You Pay</div>
+                    <div class="price-transparency-value">Total shown = Final price</div>
+                    <div class="price-transparency-subtext">No hidden charges or fees</div>
+                </div>
+                <div class="price-transparency-item">
+                    <div class="price-transparency-label">Delivery</div>
+                    <div class="price-transparency-value">FREE via Email</div>
+                    <div class="price-transparency-subtext">E-voucher within 24-72 hours</div>
+                </div>
+                <div class="price-transparency-item">
+                    <div class="price-transparency-label">Payment</div>
+                    <div class="price-transparency-value">After Price Review</div>
+                    <div class="price-transparency-subtext">Details requested after checkout</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-grid" id="grandstand-cards">
+            <!-- Main Grandstand -->
+            <div class="card">
+                <div class="card-badge">BEST VIEWS</div>
+                <h3>Main Grandstand</h3>
+                <div class="card-price-box">
+                    <div class="card-price-header">💰 Complete Price Breakdown</div>
+                    <div class="card-price-row">
+                        <span class="label">Seat price (3-day pass)</span>
+                        <span class="value">€495.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Service fee (15%)</span>
+                        <span class="value">€74.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Delivery (e-voucher)</span>
+                        <span class="value">FREE</span>
+                    </div>
+                    <div class="card-price-divider"></div>
+                    <div class="card-price-row total">
+                        <span class="label">Total per person</span>
+                        <span class="value">€569.00</span>
+                    </div>
+                    <div class="card-price-note">This is the final price · No additional fees</div>
+                </div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from original face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Start/finish line</div>
+                    <div><strong>Covered:</strong> Yes</div>
+                    <div><strong>View:</strong> Pit stops, race start, podium</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Main Grandstand', 495, 74)">ADD TO CART — €569.00</button>
+            </div>
+
+            <!-- Turn 1 Grandstand -->
+            <div class="card">
+                <h3>Turn 1 Grandstand</h3>
+                <div class="card-price-box">
+                    <div class="card-price-header">💰 Complete Price Breakdown</div>
+                    <div class="card-price-row">
+                        <span class="label">Seat price (3-day pass)</span>
+                        <span class="value">€317.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Service fee (15%)</span>
+                        <span class="value">€48.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Delivery (e-voucher)</span>
+                        <span class="value">FREE</span>
+                    </div>
+                    <div class="card-price-divider"></div>
+                    <div class="card-price-row total">
+                        <span class="label">Total per person</span>
+                        <span class="value">€365.00</span>
+                    </div>
+                    <div class="card-price-note">This is the final price · No additional fees</div>
+                </div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from original face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> End of main straight</div>
+                    <div><strong>Covered:</strong> Yes</div>
+                    <div><strong>View:</strong> Best overtaking spot</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Turn 1 Grandstand', 317, 48)">ADD TO CART — €365.00</button>
+            </div>
+
+            <!-- Beyon Grandstand -->
+            <div class="card">
+                <div class="card-badge">GREAT VALUE</div>
+                <h3>Beyon Grandstand</h3>
+                <div class="card-price-box">
+                    <div class="card-price-header">💰 Complete Price Breakdown</div>
+                    <div class="card-price-row">
+                        <span class="label">Seat price (3-day pass)</span>
+                        <span class="value">€192.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Service fee (15%)</span>
+                        <span class="value">€29.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Delivery (e-voucher)</span>
+                        <span class="value">FREE</span>
+                    </div>
+                    <div class="card-price-divider"></div>
+                    <div class="card-price-row total">
+                        <span class="label">Total per person</span>
+                        <span class="value">€221.00</span>
+                    </div>
+                    <div class="card-price-note">This is the final price · No additional fees</div>
+                </div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from original face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Infield section, turns 7-10</div>
+                    <div><strong>Covered:</strong> Yes</div>
+                    <div><strong>View:</strong> Most panoramic view</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Beyon Grandstand', 192, 29)">ADD TO CART — €221.00</button>
+            </div>
+
+            <!-- University Grandstand -->
+            <div class="card">
+                <h3>University Grandstand</h3>
+                <div class="card-price-box">
+                    <div class="card-price-header">💰 Complete Price Breakdown</div>
+                    <div class="card-price-row">
+                        <span class="label">Seat price (3-day pass)</span>
+                        <span class="value">€174.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Service fee (15%)</span>
+                        <span class="value">€26.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Delivery (e-voucher)</span>
+                        <span class="value">FREE</span>
+                    </div>
+                    <div class="card-price-divider"></div>
+                    <div class="card-price-row total">
+                        <span class="label">Total per person</span>
+                        <span class="value">€200.00</span>
+                    </div>
+                    <div class="card-price-note">This is the final price · No additional fees</div>
+                </div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from original face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Turns 2, 3 and 4 — DRS zone</div>
+                    <div><strong>Covered:</strong> Yes</div>
+                    <div><strong>View:</strong> Close-up through corners</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('University Grandstand', 174, 26)">ADD TO CART — €200.00</button>
+            </div>
+
+            <!-- Victory Grandstand -->
+            <div class="card">
+                <div class="card-badge">PREMIUM</div>
+                <h3>Victory Grandstand</h3>
+                <div class="card-price-box">
+                    <div class="card-price-header">💰 Complete Price Breakdown</div>
+                    <div class="card-price-row">
+                        <span class="label">Seat price (3-day pass)</span>
+                        <span class="value">€652.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Service fee (15%)</span>
+                        <span class="value">€98.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Delivery (e-voucher)</span>
+                        <span class="value">FREE</span>
+                    </div>
+                    <div class="card-price-divider"></div>
+                    <div class="card-price-row total">
+                        <span class="label">Total per person</span>
+                        <span class="value">€750.00</span>
+                    </div>
+                    <div class="card-price-note">This is the final price · No additional fees</div>
+                </div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from original face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Final corners and finish line</div>
+                    <div><strong>Covered:</strong> Yes</div>
+                    <div><strong>View:</strong> Race winner crossing the line</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Victory Grandstand', 652, 98)">ADD TO CART — €750.00</button>
+            </div>
+
+            <!-- Batelco Grandstand -->
+            <div class="card">
+                <h3>Batelco Grandstand</h3>
+                <div class="card-price-box">
+                    <div class="card-price-header">💰 Complete Price Breakdown</div>
+                    <div class="card-price-row">
+                        <span class="label">Seat price (3-day pass)</span>
+                        <span class="value">€261.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Service fee (15%)</span>
+                        <span class="value">€39.00</span>
+                    </div>
+                    <div class="card-price-row fee">
+                        <span class="label">Delivery (e-voucher)</span>
+                        <span class="value">FREE</span>
+                    </div>
+                    <div class="card-price-divider"></div>
+                    <div class="card-price-row total">
+                        <span class="label">Total per person</span>
+                        <span class="value">€300.00</span>
+                    </div>
+                    <div class="card-price-note">This is the final price · No additional fees</div>
+                </div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from original face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Turns 11-14</div>
+                    <div><strong>Covered:</strong> Yes</div>
+                    <div><strong>View:</strong> Technical section</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Batelco Grandstand', 261, 39)">ADD TO CART — €300.00</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section">
+        <div class="how-inner">
+            <h2 class="section-title">How It <span class="text-red">Works</span></h2>
+            <div class="how-grid">
+                <div>
+                    <div class="how-step">1</div>
+                    <h4 class="how-title">Select</h4>
+                    <p class="how-desc">Choose your grandstand and review the complete price breakdown</p>
+                </div>
+                <div>
+                    <div class="how-step">2</div>
+                    <h4 class="how-title">Review</h4>
+                    <p class="how-desc">See the final total including all fees before checkout</p>
+                </div>
+                <div>
+                    <div class="how-step">3</div>
+                    <h4 class="how-title">Pay</h4>
+                    <p class="how-desc">Enter payment details only after confirming your order</p>
+                </div>
+                <div>
+                    <div class="how-step">4</div>
+                    <h4 class="how-title">Receive</h4>
+                    <p class="how-desc">Get your e-voucher via email within 24-72 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-inner">
+            <h2 class="section-title">Frequently Asked <span class="text-red">Questions</span></h2>
+            
+            <div class="faq-item">
+                <h4 class="faq-q">Are you the official seller?</h4>
+                <p class="faq-a">No. We are an independent reseller operating on the secondary market. We are NOT affiliated with Formula 1®, FIA, or Bahrain International Circuit. We purchase seats and resell them to customers.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">Why are your prices different from face value?</h4>
+                <p class="faq-a">As a secondary market reseller, our prices are determined by market demand and availability. Prices may be higher or lower than the original face value set by the official organizer.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">What fees are included in the price?</h4>
+                <p class="faq-a">All prices include: (1) the seat resale price, (2) a 15% service fee, and (3) free e-voucher delivery. The complete breakdown is shown on every option and in your cart. The total shown is the final amount you pay — there are no hidden fees.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">When do I provide payment details?</h4>
+                <p class="faq-a">You will only be asked for payment information AFTER you have reviewed the complete price breakdown in your cart and clicked "Proceed to Payment". You can review all costs before entering any payment details.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">Are the seats guaranteed?</h4>
+                <p class="faq-a">Yes. All seats we sell are 100% guaranteed. If we cannot fulfill your order for any reason, you will receive a full refund.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">How will I receive my confirmation?</h4>
+                <p class="faq-a">You will receive your e-voucher via email within 24-72 hours after payment confirmation. This voucher serves as your entry pass.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">What is your refund policy?</h4>
+                <p class="faq-a">All sales are final once payment is confirmed. However, you may transfer your booking to another person. If the event is cancelled entirely, you will receive a full refund.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section">
+        <div class="contact-inner">
+            <h2 class="section-title">Contact <span class="text-red">Us</span></h2>
+            <p style="color: #888; margin-bottom: 30px;">Questions about pricing or your order? We respond within 24 hours.</p>
+            
+            <div class="contact-box">
+                <div class="contact-grid">
+                    <div>
+                        <p class="contact-label">EMAIL</p>
+                        <p class="contact-value">info@bahraingp.com</p>
+                    </div>
+                    <div>
+                        <p class="contact-label">BUSINESS ADDRESS</p>
+                        <p class="contact-value">Ondiep 3, 3552EA Utrecht, Netherlands</p>
+                    </div>
+                    <div>
+                        <p class="contact-label">REGISTRATION</p>
+                        <p class="contact-value">KVK: 96783397</p>
+                        <p class="contact-value">VAT: NL005230863B92</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="color: #666; font-size: 0.8rem;">Response time: within 24 hours on business days</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-policies">
+                <div>
+                    <h4>PRICING POLICY</h4>
+                    <p>All prices include seat cost + 15% service fee. Complete breakdown shown before payment. No hidden fees. Total displayed = final amount.</p>
+                </div>
+                <div>
+                    <h4>REFUND POLICY</h4>
+                    <p>All sales are final. Full refund if event is cancelled or we cannot fulfill your order. Transfers to other persons allowed.</p>
+                </div>
+                <div>
+                    <h4>DELIVERY</h4>
+                    <p>Free e-voucher delivery via email within 24-72 hours of payment confirmation.</p>
+                </div>
+                <div>
+                    <h4>PAYMENT</h4>
+                    <p>Secure payment via Bank Transfer, PayPal, or Credit Card. Payment details requested only after price review.</p>
+                </div>
+            </div>
+            
+            <div class="footer-business">
+                <p><strong>Business Registration:</strong> KVK 96783397 · VAT NL005230863B92</p>
+                <p><strong>Address:</strong> Ondiep 3, 3552EA Utrecht, Netherlands</p>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p class="footer-disclaimer-title">⚠️ IMPORTANT: SECONDARY MARKET RESELLER DISCLOSURE</p>
+                <p class="footer-disclaimer-text">
+                    This website is operated by an independent reseller. We are NOT the official seller and are NOT affiliated with, endorsed by, or connected to Formula 1®, FIA, Bahrain International Circuit, or any official event organizer. 
+                    All seats offered are purchased on the secondary market. Prices are set by market demand and may be significantly above or below the original face value. 
+                    All prices shown include the seat price, a 15% service fee, and free e-voucher delivery. The total price displayed is the final amount you will pay — there are no additional hidden fees.
+                    F1®, FORMULA ONE®, FORMULA 1®, FIA FORMULA ONE WORLD CHAMPIONSHIP®, GRAND PRIX® and related marks are trademarks of Formula One Licensing B.V.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <button onclick="openModal('privacy')">Privacy Policy</button>
+                <button onclick="openModal('terms')">Terms & Conditions</button>
+                <button onclick="openModal('refund')">Refund Policy</button>
+                <button onclick="openModal('pricing')">Pricing Policy</button>
+            </div>
+
+            <p class="footer-copyright">© 2026 Bahrain GP · Independent Secondary Market Reseller · All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay">
+        <nav class="cart-nav">
+            <div class="logo">BAHRAIN <span class="text-red">GP</span></div>
+            <button class="cart-back" onclick="closeCart()">← Back to seats</button>
+        </nav>
+        <div class="cart-content">
+            <h1 class="cart-title">Your <span class="text-red">Order</span></h1>
+            <p class="cart-subtitle">Bahrain Grand Prix 2026 · 10–12 April</p>
+            
+            <!-- COMPLIANCE: Cart Notice -->
+            <div class="cart-compliance-notice">
+                <div class="cart-compliance-icon">📋</div>
+                <div class="cart-compliance-text">
+                    <div class="cart-compliance-title">REVIEW YOUR ORDER BEFORE PAYMENT</div>
+                    <div class="cart-compliance-desc">The complete price breakdown is shown below. You will only be asked for payment details after reviewing and confirming this order.</div>
+                </div>
+            </div>
+            
+            <div id="cart-empty" class="cart-empty">
+                <p style="color: #555; margin-bottom: 15px;">Your cart is empty.</p>
+                <button onclick="closeCart()" style="background: #E8002D; border: none; color: white; padding: 12px 24px; cursor: pointer; font-weight: 600;">← Browse Seats</button>
+            </div>
+
+            <div id="cart-filled" class="cart-grid" style="display: none;">
+                <div id="cart-items"></div>
+                
+                <div class="cart-summary">
+                    <div class="summary-header">
+                        <span class="summary-icon">🛒</span>
+                        <span class="summary-title">Order Summary</span>
+                    </div>
+                    
+                    <!-- CRITICAL: Complete Price Specification -->
+                    <div class="price-specification">
+                        <div class="price-spec-header">💰 COMPLETE PRICE BREAKDOWN</div>
+                        <div id="price-spec-items"></div>
+                        <div class="price-spec-divider"></div>
+                        <div class="price-spec-subtotal">
+                            <span class="label">Subtotal (seats)</span>
+                            <span class="value" id="subtotal-seats">€0.00</span>
+                        </div>
+                        <div class="price-spec-subtotal">
+                            <span class="label">Service fees (15%)</span>
+                            <span class="value" id="subtotal-fees">€0.00</span>
+                        </div>
+                        <div class="price-spec-subtotal">
+                            <span class="label">Delivery</span>
+                            <span class="value">FREE</span>
+                        </div>
+                        <div class="price-spec-total">
+                            <span class="label">TOTAL TO PAY</span>
+                            <span class="value" id="cart-total">€0.00</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Compliance Confirmations -->
+                    <div class="compliance-confirm">
+                        <div class="compliance-confirm-row">
+                            <span class="compliance-check">✓</span>
+                            <span>Price shown above is the <strong>final amount</strong> — no additional fees</span>
+                        </div>
+                        <div class="compliance-confirm-row">
+                            <span class="compliance-check">✓</span>
+                            <span>Payment details requested <strong>only after</strong> you click proceed</span>
+                        </div>
+                        <div class="compliance-confirm-row">
+                            <span class="compliance-check">✓</span>
+                            <span>All prices in <strong>EUR (€)</strong></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Secondary Market Warning -->
+                    <div class="secondary-market-warning">
+                        <div class="warning-title">⚠️ SECONDARY MARKET PURCHASE</div>
+                        <div class="warning-text">These are resale seats. Prices may differ from original face value. By proceeding, you acknowledge this is a secondary market purchase from an independent reseller not affiliated with the official organizer.</div>
+                    </div>
+                    
+                    <button class="checkout-btn" onclick="checkout()">PROCEED TO PAYMENT →</button>
+                    <p class="checkout-note">🔒 <strong>Secure checkout</strong> · Payment details on next page</p>
+                    
+                    <!-- Payment Methods -->
+                    <div class="payment-methods-box">
+                        <div class="payment-methods-title">Accepted Payment Methods</div>
+                        <div class="payment-methods-list">
+                            <span class="payment-method">💳 Visa</span>
+                            <span class="payment-method">💳 Mastercard</span>
+                            <span class="payment-method">💳 Amex</span>
+                            <span class="payment-method">🏦 Bank Transfer</span>
+                            <span class="payment-method">PayPal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal-overlay" id="modal-privacy">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('privacy')">×</button>
+            <h2 class="modal-title">Privacy Policy</h2>
+            <div class="modal-content">
+                <p><strong>Last updated:</strong> January 2025</p>
+                
+                <h3>1. Introduction</h3>
+                <p>This website is operated by an independent reseller registered in the Netherlands (KVK: 96783397). This Privacy Policy explains how we collect, use, and protect your personal information.</p>
+                
+                <h3>2. Information We Collect</h3>
+                <p>When you make a purchase, we collect:</p>
+                <ul>
+                    <li>Full name</li>
+                    <li>Email address</li>
+                    <li>Phone number (optional)</li>
+                    <li>Billing address</li>
+                    <li>Payment information (processed securely by payment providers)</li>
+                </ul>
+                
+                <h3>3. How We Use Your Information</h3>
+                <p>We use your information to:</p>
+                <ul>
+                    <li>Process and fulfill your order</li>
+                    <li>Send order confirmations and e-vouchers</li>
+                    <li>Provide customer support</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+                
+                <h3>4. Data Protection</h3>
+                <p>We implement appropriate security measures to protect your personal information. Payment data is processed by certified payment providers and we do not store credit card details on our servers.</p>
+                
+                <h3>5. Your Rights (GDPR)</h3>
+                <p>Under GDPR, you have the right to access, correct, or delete your personal data. Contact us at info@bahraingp.com for any data-related requests.</p>
+                
+                <h3>6. Contact</h3>
+                <p>Email: info@bahraingp.com</p>
+                <p>Address: Ondiep 3, 3552EA Utrecht, Netherlands</p>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal('privacy')">Close</button>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal-overlay" id="modal-terms">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('terms')">×</button>
+            <h2 class="modal-title">Terms & Conditions</h2>
+            <div class="modal-content">
+                <p><strong>Last updated:</strong> January 2025</p>
+                
+                <h3>1. About Us</h3>
+                <p>This website is operated by an independent reseller registered in the Netherlands (KVK: 96783397, VAT: NL005230863B92). We are NOT the official vendor and are NOT affiliated with Formula 1®, FIA, Bahrain International Circuit, or any official event organizer.</p>
+                
+                <h3>2. Secondary Market</h3>
+                <p>All seats sold through this website are obtained on the secondary market. Prices are determined by market demand and may be higher or lower than the original face value. By purchasing from us, you acknowledge and accept this.</p>
+                
+                <h3>3. Pricing Transparency</h3>
+                <p>All prices displayed include:</p>
+                <ul>
+                    <li>The seat resale price</li>
+                    <li>A 15% service fee</li>
+                    <li>Free e-voucher delivery via email</li>
+                </ul>
+                <p>The total price shown is the final amount you will pay. There are no hidden fees or additional charges. You will see the complete price breakdown before being asked for any payment information.</p>
+                
+                <h3>4. Payment Process</h3>
+                <p>Payment details are only requested AFTER you have reviewed the complete order summary and price breakdown. We accept payment via bank transfer, PayPal, and credit card (Visa, Mastercard, Amex).</p>
+                
+                <h3>5. Delivery</h3>
+                <p>E-vouchers are delivered via email within 24-72 hours of payment confirmation. This e-voucher serves as your entry pass to the event.</p>
+                
+                <h3>6. Seat Guarantee</h3>
+                <p>All seats are 100% guaranteed. If we cannot fulfill your order for any reason, you will receive a full refund of your purchase price.</p>
+                
+                <h3>7. Contact</h3>
+                <p>Email: info@bahraingp.com</p>
+                <p>Address: Ondiep 3, 3552EA Utrecht, Netherlands</p>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal('terms')">Close</button>
+        </div>
+    </div>
+
+    <!-- Refund Policy Modal -->
+    <div class="modal-overlay" id="modal-refund">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('refund')">×</button>
+            <h2 class="modal-title">Refund Policy</h2>
+            <div class="modal-content">
+                <p><strong>Last updated:</strong> January 2025</p>
+                
+                <h3>1. General Policy</h3>
+                <p>All sales are final. Once payment is confirmed, purchases are non-refundable.</p>
+                
+                <h3>2. Event Cancellation</h3>
+                <p>If the event is fully cancelled by the organizer and not rescheduled, you will receive a full refund of your purchase price including all fees.</p>
+                
+                <h3>3. Fulfillment Guarantee</h3>
+                <p>All seats are 100% guaranteed. If we cannot provide the seats you purchased for any reason, you will receive a full refund.</p>
+                
+                <h3>4. Transfers</h3>
+                <p>While refunds are not available for change of mind, you may transfer your booking to another person free of charge. Contact us at info@bahraingp.com to arrange a transfer.</p>
+                
+                <h3>5. No Refunds For</h3>
+                <ul>
+                    <li>Change of mind or personal circumstances</li>
+                    <li>Travel disruptions or visa issues</li>
+                    <li>Weather conditions</li>
+                    <li>Partial event modifications</li>
+                </ul>
+                
+                <h3>6. Contact</h3>
+                <p>For refund inquiries: info@bahraingp.com</p>
+                <p>Address: Ondiep 3, 3552EA Utrecht, Netherlands</p>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal('refund')">Close</button>
+        </div>
+    </div>
+
+    <!-- Pricing Policy Modal -->
+    <div class="modal-overlay" id="modal-pricing">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('pricing')">×</button>
+            <h2 class="modal-title">Pricing Policy</h2>
+            <div class="modal-content">
+                <p><strong>Last updated:</strong> January 2025</p>
+                
+                <h3>1. Our Commitment to Transparency</h3>
+                <p>We are committed to complete price transparency. You will always see the full price breakdown BEFORE you are asked for any payment information.</p>
+                
+                <h3>2. Price Components</h3>
+                <p>Every price on this website includes:</p>
+                <ul>
+                    <li><strong>Seat Price:</strong> The resale market price for the grandstand seat</li>
+                    <li><strong>Service Fee:</strong> 15% of the seat price for our booking and fulfillment services</li>
+                    <li><strong>Delivery:</strong> FREE (e-voucher via email)</li>
+                </ul>
+                
+                <h3>3. No Hidden Fees</h3>
+                <p>The total price shown is the final amount you will pay. There are absolutely no additional fees, charges, taxes, or surprises at any stage of the checkout process.</p>
+                
+                <h3>4. Secondary Market Pricing</h3>
+                <p>As an independent secondary market reseller, our prices are determined by market demand, availability, and other factors. Prices may be higher or lower than the original face value set by the official event organizer.</p>
+                
+                <h3>5. Where You See Prices</h3>
+                <p>The complete price breakdown is displayed:</p>
+                <ul>
+                    <li>On every seat option card (before adding to cart)</li>
+                    <li>In your shopping cart (with itemized breakdown)</li>
+                    <li>In the order summary (before checkout)</li>
+                </ul>
+                <p>You will review and confirm the final total BEFORE entering any payment details.</p>
+                
+                <h3>6. Currency</h3>
+                <p>All prices are displayed and charged in Euros (EUR / €).</p>
+                
+                <h3>7. Questions</h3>
+                <p>If you have any questions about our pricing, please contact us at info@bahraingp.com before making a purchase.</p>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal('pricing')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Cart data with separate price components
+        let cart = [];
+
+        // Add to cart with price breakdown
+        function addToCart(name, seatPrice, serviceFee) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ 
+                    name, 
+                    seatPrice, 
+                    serviceFee, 
+                    total: seatPrice + serviceFee,
+                    qty: 1 
+                });
+            }
+            updateCart();
+            openCart();
+        }
+
+        // Remove from cart
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Change quantity
+        function changeQty(index, delta) {
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        // Format price
+        function formatPrice(amount) {
+            return '€' + amount.toLocaleString('nl-NL', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        }
+
+        // Update cart display with complete price breakdown
+        function updateCart() {
+            const countEl = document.getElementById('cart-count');
+            const emptyEl = document.getElementById('cart-empty');
+            const filledEl = document.getElementById('cart-filled');
+            const itemsEl = document.getElementById('cart-items');
+            const priceSpecEl = document.getElementById('price-spec-items');
+            const subtotalSeatsEl = document.getElementById('subtotal-seats');
+            const subtotalFeesEl = document.getElementById('subtotal-fees');
+            const totalEl = document.getElementById('cart-total');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            countEl.textContent = totalItems;
+
+            if (cart.length === 0) {
+                emptyEl.style.display = 'block';
+                filledEl.style.display = 'none';
+                return;
+            }
+
+            emptyEl.style.display = 'none';
+            filledEl.style.display = 'grid';
+
+            // Render cart items with full price breakdown
+            itemsEl.innerHTML = cart.map((item, i) => `
+                <div class="cart-item">
+                    <div class="cart-item-header">
+                        <div class="cart-item-icon">🏎️</div>
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-meta">Bahrain Grand Prix 2026 · 3-day pass · 10-12 April</div>
+                        </div>
+                    </div>
+                    <div class="cart-item-breakdown">
+                        <div class="cart-breakdown-title">Price Breakdown (per person × ${item.qty})</div>
+                        <div class="cart-breakdown-row">
+                            <span class="label">Seat price</span>
+                            <span class="value">${formatPrice(item.seatPrice)} × ${item.qty} = ${formatPrice(item.seatPrice * item.qty)}</span>
+                        </div>
+                        <div class="cart-breakdown-row">
+                            <span class="label">Service fee (15%)</span>
+                            <span class="value">${formatPrice(item.serviceFee)} × ${item.qty} = ${formatPrice(item.serviceFee * item.qty)}</span>
+                        </div>
+                        <div class="cart-breakdown-row">
+                            <span class="label">Delivery</span>
+                            <span class="value">FREE</span>
+                        </div>
+                        <div class="cart-breakdown-row subtotal">
+                            <span class="label">Item Total</span>
+                            <span class="value">${formatPrice(item.total * item.qty)}</span>
+                        </div>
+                    </div>
+                    <div class="cart-item-controls">
+                        <div class="cart-item-qty">
+                            <span class="qty-label">Quantity:</span>
+                            <button class="qty-btn" onclick="changeQty(${i}, -1)">−</button>
+                            <span class="qty-value">${item.qty}</span>
+                            <button class="qty-btn" onclick="changeQty(${i}, 1)">+</button>
+                        </div>
+                        <button class="remove-btn" onclick="removeFromCart(${i})">Remove</button>
+                    </div>
+                </div>
+            `).join('');
+
+            // Calculate totals
+            const totalSeats = cart.reduce((sum, item) => sum + (item.seatPrice * item.qty), 0);
+            const totalFees = cart.reduce((sum, item) => sum + (item.serviceFee * item.qty), 0);
+            const grandTotal = totalSeats + totalFees;
+
+            // Render price specification items
+            priceSpecEl.innerHTML = cart.map(item => `
+                <div class="price-spec-row">
+                    <span class="label">${item.name} × ${item.qty}</span>
+                    <span class="value">${formatPrice(item.seatPrice * item.qty)}</span>
+                </div>
+                <div class="price-spec-row indent">
+                    <span class="label">+ Service fee (15%)</span>
+                    <span class="value">${formatPrice(item.serviceFee * item.qty)}</span>
+                </div>
+            `).join('');
+
+            // Update totals
+            subtotalSeatsEl.textContent = formatPrice(totalSeats);
+            subtotalFeesEl.textContent = formatPrice(totalFees);
+            totalEl.textContent = formatPrice(grandTotal);
+        }
+
+        // Open/close cart
+        function openCart() {
+            document.getElementById('cart-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            document.getElementById('cart-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Checkout
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty.');
+                return;
+            }
+            const total = document.getElementById('cart-total').textContent;
+            alert('Thank you for your order!\n\nTotal: ' + total + '\n\nYou will now be redirected to our secure payment page where you can enter your payment details.\n\nThis is the final amount — no additional fees will be charged.');
+        }
+
+        // Filter tabs
+        function filterTabs(category, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // Modal functions
+        function openModal(type) {
+            document.getElementById('modal-' + type).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(type) {
+            document.getElementById('modal-' + type).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on outside click
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
