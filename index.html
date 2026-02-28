@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australian Grand Prix 2026 | Independent Reseller</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: #15151E; color: white; font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; line-height: 1.5; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Compliance Banner */
+        .compliance-banner { background: #000; border-bottom: 3px solid #E8002D; padding: 16px 20px; font-size: 1rem; color: #fff; position: sticky; top: 0; z-index: 1000; }
+        .compliance-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 15px; text-align: center; }
+        .compliance-badge { background: #E8002D; color: white; padding: 8px 16px; font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
+        
+        /* Navbar */
+        .navbar { background: rgba(21,21,30,0.98); padding: 15px 20px; border-bottom: 2px solid #E8002D; position: sticky; top: 60px; z-index: 100; display: flex; justify-content: space-between; align-items: center; max-width: 100%; }
+        .logo { font-weight: 900; font-size: 1.5rem; font-style: italic; }
+        .text-red { color: #E8002D; }
+        .btn-cart { background: #E8002D; color: white; border: none; padding: 12px 24px; font-weight: 700; cursor: pointer; font-size: 1rem; }
+        .btn-cart:hover { background: #c0001f; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, rgba(10,10,10,0.85), rgba(10,10,10,0.5)), url("https://i.ibb.co/Jjzk0ngZ/01jz0ppftyp3m7bn54h4.webp") center/cover; padding: 120px 20px; text-align: center; }
+        .hero-date { border: 1px solid #E8002D; display: inline-block; padding: 5px 15px; margin-bottom: 20px; background: rgba(232,0,45,0.1); font-weight: 700; }
+        .hero h1 { font-size: 3rem; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #ccc; margin-bottom: 20px; }
+        .hero-warning { font-size: 0.9rem; color: #ff6b6b; margin-bottom: 30px; }
+        .trust-badges { display: flex; justify-content: center; gap: 20px; margin-top: 40px; flex-wrap: wrap; }
+        .trust-badge { background: rgba(0,0,0,0.5); padding: 10px 20px; font-size: 0.85rem; }
+        
+        /* Stats */
+        .stats { background: #E8002D; padding: 30px 20px; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 20px; }
+        .stat-val { font-size: 2rem; font-weight: 900; }
+        .stat-label { text-transform: uppercase; }
+        @media (max-width: 600px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+        
+        /* Sections */
+        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { font-size: 2.5rem; font-weight: 900; font-style: italic; text-transform: uppercase; text-align: center; margin-bottom: 40px; }
+        
+        /* Tabs */
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 50px; flex-wrap: wrap; }
+        .tab-btn { background: #2a2a35; color: white; border: none; padding: 10px 25px; font-weight: 700; text-transform: uppercase; cursor: pointer; }
+        .tab-btn.active, .tab-btn:hover { background: #E8002D; }
+        
+        /* Cards Grid */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: #1e1e26; border-top: 4px solid #E8002D; padding: 25px; position: relative; }
+        .card-badge { position: absolute; top: 0; right: 0; background: #E8002D; color: white; padding: 5px 10px; font-size: 0.75rem; font-weight: 700; }
+        .card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; }
+        .card-price { color: #E8002D; font-weight: 700; margin-bottom: 5px; }
+        .card-disclaimer { font-size: 0.75rem; color: #ff6b6b; margin-bottom: 15px; background: rgba(255,0,0,0.1); padding: 5px 8px; display: inline-block; }
+        .card-info { font-size: 0.9rem; color: #aaa; margin-bottom: 15px; }
+        .card-info strong { color: white; }
+        .card-btn { width: 100%; background: #E8002D; color: white; border: none; padding: 12px; font-weight: 700; cursor: pointer; }
+        .card-btn:hover { background: #c0001f; }
+        
+        /* How It Works */
+        .how-section { padding: 60px 20px; background: #15151E; }
+        .how-inner { max-width: 1000px; margin: 0 auto; }
+        .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+        .how-step { width: 50px; height: 50px; background: #E8002D; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 1.5rem; font-weight: 900; }
+        .how-title { color: white; margin-bottom: 8px; text-transform: uppercase; }
+        .how-desc { color: #888; font-size: 0.9rem; }
+        
+        /* FAQ */
+        .faq-section { padding: 60px 20px; background: #1e1e26; }
+        .faq-inner { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #333; padding: 20px 0; }
+        .faq-q { color: white; margin-bottom: 10px; font-size: 1rem; font-weight: 700; }
+        .faq-a { color: #888; font-size: 0.9rem; line-height: 1.6; }
+        
+        /* Contact */
+        .contact-section { padding: 80px 20px; background: #1a1a24; }
+        .contact-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+        .contact-box { background: #111; padding: 30px; margin: 30px 0; text-align: left; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .contact-label { color: #666; font-size: 0.8rem; margin-bottom: 5px; }
+        .contact-value { color: white; }
+        
+        /* Footer */
+        .footer { background: #0a0a0a; padding: 40px 20px; border-top: 1px solid #222; }
+        .footer-inner { max-width: 1000px; margin: 0 auto; }
+        .footer-policies { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid #222; }
+        .footer-policies h4 { color: #E8002D; margin-bottom: 10px; font-size: 0.9rem; }
+        .footer-policies p { font-size: 0.85rem; color: #888; line-height: 1.6; }
+        .footer-business { text-align: center; margin-bottom: 20px; font-size: 0.85rem; color: #666; }
+        .footer-business strong { color: #888; }
+        .footer-disclaimer { text-align: center; padding: 20px; background: #111; margin-bottom: 20px; }
+        .footer-disclaimer-title { font-size: 0.75rem; color: #E8002D; font-weight: 700; margin-bottom: 8px; }
+        .footer-disclaimer-text { font-size: 0.75rem; color: #666; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+        .footer-links { text-align: center; margin-bottom: 20px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .footer-links button { color: #888; font-size: 0.85rem; text-decoration: underline; background: none; border: none; cursor: pointer; }
+        .footer-links button:hover { color: #E8002D; }
+        .footer-copyright { font-size: 0.8rem; color: #444; text-align: center; }
+        
+        /* Cart Overlay */
+        .cart-overlay { display: none; position: fixed; inset: 0; background: #15151E; z-index: 9999; overflow-y: auto; }
+        .cart-overlay.active { display: block; }
+        .cart-nav { background: #0a0a0f; border-bottom: 1px solid #1e1e2e; padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; }
+        .cart-back { color: #888; background: none; border: none; cursor: pointer; }
+        .cart-content { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
+        .cart-title { font-size: 2.5rem; font-style: italic; text-transform: uppercase; margin-bottom: 8px; }
+        .cart-subtitle { color: #555; font-size: 0.85rem; margin-bottom: 40px; }
+        .cart-empty { text-align: center; padding: 60px 20px; background: #1a1a2a; border: 1px solid #222; }
+        .cart-grid { display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: start; }
+        @media (max-width: 800px) { .cart-grid { grid-template-columns: 1fr; } }
+        .cart-item { background: #1a1a2a; border: 1px solid #222; padding: 20px; margin-bottom: 10px; display: flex; align-items: center; gap: 16px; }
+        .cart-item-icon { width: 48px; height: 48px; background: #E8002D; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+        .cart-item-info { flex: 1; }
+        .cart-item-name { font-size: 1rem; font-style: italic; text-transform: uppercase; margin-bottom: 4px; }
+        .cart-item-meta { font-size: 0.72rem; color: #555; margin-bottom: 10px; }
+        .cart-item-qty { display: flex; align-items: center; gap: 8px; }
+        .qty-btn { width: 28px; height: 28px; background: #222; border: 1px solid #333; color: white; cursor: pointer; }
+        .remove-btn { background: none; border: none; color: #444; font-size: 0.7rem; cursor: pointer; margin-left: 8px; }
+        .cart-item-total { text-align: right; }
+        .cart-item-price { font-size: 1.4rem; }
+        .cart-item-calc { font-size: 0.68rem; color: #444; }
+        .cart-summary { background: #1a1a2a; border: 1px solid #222; padding: 24px; position: sticky; top: 84px; }
+        .summary-title { font-size: 1.1rem; font-style: italic; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #222; }
+        .summary-line { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.85rem; }
+        .summary-line-name { color: #666; }
+        .summary-line-price { font-weight: 600; }
+        .summary-total { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-top: 1px solid #333; border-bottom: 1px solid #333; margin: 14px 0; }
+        .summary-total-label { font-style: italic; text-transform: uppercase; }
+        .summary-total-price { font-size: 2rem; }
+        .summary-note { font-size: 0.65rem; color: #555; text-align: center; margin-bottom: 12px; }
+        .checkout-btn { width: 100%; background: #E8002D; color: white; border: none; padding: 16px; font-size: 1.2rem; font-style: italic; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+        .checkout-btn:hover { background: #c0001f; }
+        .secure-note { text-align: center; font-size: 0.7rem; color: #555; margin-top: 8px; }
+        
+        /* Modal */
+        .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 10000; overflow-y: auto; align-items: flex-start; justify-content: center; padding: 50px 20px; }
+        .modal-overlay.active { display: flex; }
+        .modal-box { background: #1a1a24; max-width: 800px; width: 100%; padding: 40px; position: relative; }
+        .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; color: #E8002D; font-size: 2rem; cursor: pointer; }
+        .modal-title { font-size: 2rem; font-weight: 900; margin-bottom: 30px; color: #E8002D; }
+        .modal-content { color: #ccc; line-height: 1.8; font-size: 0.95rem; }
+        .modal-content h3 { color: white; margin-top: 25px; margin-bottom: 10px; }
+        .modal-content p { margin-bottom: 15px; }
+        .modal-content ul { margin-left: 20px; margin-bottom: 15px; }
+        .modal-content li { margin-bottom: 5px; }
+        .modal-close-btn { margin-top: 30px; background: #E8002D; color: white; border: none; padding: 12px 30px; font-weight: 700; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <!-- Compliance Banner -->
+    <div class="compliance-banner">
+        <div class="compliance-inner">
+            <span class="compliance-badge">⚠️ SECONDARY MARKET</span>
+            <span><strong class="text-red">INDEPENDENT RESELLER</strong> — We are NOT affiliated with Formula 1®, FIA, or Albert Park Grand Prix Circuit. Prices may be higher or lower than face value.</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">AUSTRALIAN <span class="text-red">GP</span></div>
+        <button class="btn-cart" onclick="openCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-date">5 - 6 - 7 - 8 MARCH 2026</div>
+        <h1>AUSTRALIAN GRAND PRIX 2026</h1>
+        <p>Experience the thrill of the season opener at Melbourne's iconic Albert Park Circuit.</p>
+        <p class="hero-warning">⚠️ Secondary market reseller · Prices may differ from face value</p>
+        <button class="btn-cart" onclick="addToCart('Piastri Grandstand', 695)">🛒 VIEW SEATS</button>
+        <div class="trust-badges">
+            <div class="trust-badge">✓ 100% Seat Guarantee</div>
+            <div class="trust-badge">✓ Secure Payment</div>
+            <div class="trust-badge">✓ E-voucher via Email</div>
+        </div>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats">
+        <div><div class="stat-val">58</div><div class="stat-label">Laps</div></div>
+        <div><div class="stat-val">5.303</div><div class="stat-label">KM Circuit</div></div>
+        <div><div class="stat-val">OPENER</div><div class="stat-label">Season</div></div>
+        <div><div class="stat-val">LIMITED</div><div class="stat-label">Availability</div></div>
+    </div>
+
+    <!-- Seat Options -->
+    <section class="section">
+        <h2 class="section-title">ALL SEAT <span class="text-red">OPTIONS</span></h2>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="filterTabs('all', this)">ALL</button>
+            <button class="tab-btn" onclick="filterTabs('grandstand', this)">GRANDSTAND</button>
+        </div>
+
+        <p style="text-align: center; color: #888; margin-bottom: 30px; font-size: 0.9rem;">All prices shown are resale prices and may differ from original face value</p>
+
+        <div class="cards-grid" id="grandstand-cards">
+            <!-- Piastri Grandstand -->
+            <div class="card">
+                <div class="card-badge">NEW 2026</div>
+                <h3>Piastri Grandstand</h3>
+                <div class="card-price">from €695 / 4 days</div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Main Straight, opposite pit lane</div>
+                    <div><strong>Views:</strong> Start/finish line, pit stops, podium</div>
+                    <div><strong>Bonus:</strong> Oscar Piastri merchandise pack included</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Piastri Grandstand', 695)">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Brabham Grandstand -->
+            <div class="card">
+                <div class="card-badge">BEST VIEWS</div>
+                <h3>Brabham Grandstand</h3>
+                <div class="card-price">from €549 / 4 days</div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Infield of Turn 1</div>
+                    <div><strong>Views:</strong> First-lap action, opening corners</div>
+                    <div><strong>Highlights:</strong> Prime overtaking spot, intense battles</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Brabham Grandstand', 549)">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Jones Grandstand -->
+            <div class="card">
+                <h3>Jones Grandstand</h3>
+                <div class="card-price">from €549 / 4 days</div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Turns 1 & 2, outside corner entry</div>
+                    <div><strong>Views:</strong> Pit lane exit into Turn 1</div>
+                    <div><strong>Highlights:</strong> Wheel-to-wheel racing, first lap drama</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Jones Grandstand', 549)">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Fangio Grandstand -->
+            <div class="card">
+                <h3>Fangio Grandstand</h3>
+                <div class="card-price">from €595 / 4 days</div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Main Straight, across from Pit Lane</div>
+                    <div><strong>Views:</strong> Lights out to chequered flag</div>
+                    <div><strong>Highlights:</strong> Race start, podium celebrations</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Fangio Grandstand', 595)">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Ricciardo Grandstand -->
+            <div class="card">
+                <h3>Ricciardo Grandstand</h3>
+                <div class="card-price">from €425 / 4 days</div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Infield between Turns 3 & 4</div>
+                    <div><strong>Views:</strong> Technical challenging section</div>
+                    <div><strong>Highlights:</strong> Overtaking opportunities at Turn 3</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Ricciardo Grandstand', 425)">🛒 Add to Cart</button>
+            </div>
+
+            <!-- Prost Grandstand -->
+            <div class="card">
+                <div class="card-badge">LIMITED STOCK</div>
+                <h3>Prost Grandstand</h3>
+                <div class="card-price">from €399 / 4 days</div>
+                <div class="card-disclaimer">⚠️ Resale price · May differ from face value</div>
+                <div class="card-info">
+                    <div><strong>Location:</strong> Turn 14, final corner</div>
+                    <div><strong>Views:</strong> Pit lane entry, rear wings opening</div>
+                    <div><strong>Highlights:</strong> Final launch towards chequered flag</div>
+                </div>
+                <button class="card-btn" onclick="addToCart('Prost Grandstand', 399)">🛒 Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section">
+        <div class="how-inner">
+            <h2 class="section-title">How It <span class="text-red">Works</span></h2>
+            <div class="how-grid">
+                <div>
+                    <div class="how-step">1</div>
+                    <h4 class="how-title">Choose</h4>
+                    <p class="how-desc">Select your preferred grandstand seats</p>
+                </div>
+                <div>
+                    <div class="how-step">2</div>
+                    <h4 class="how-title">Book</h4>
+                    <p class="how-desc">Add to cart and proceed to checkout</p>
+                </div>
+                <div>
+                    <div class="how-step">3</div>
+                    <h4 class="how-title">Pay</h4>
+                    <p class="how-desc">Secure payment via bank transfer, PayPal or credit card</p>
+                </div>
+                <div>
+                    <div class="how-step">4</div>
+                    <h4 class="how-title">Receive</h4>
+                    <p class="how-desc">Get your e-voucher via email within 24-72 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-inner">
+            <h2 class="section-title">Frequently Asked <span class="text-red">Questions</span></h2>
+            
+            <div class="faq-item">
+                <h4 class="faq-q">Are you the official seller?</h4>
+                <p class="faq-a">No. We are an independent reseller operating on the secondary market. We are NOT affiliated with Formula 1®, FIA, or the Australian Grand Prix Corporation.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">Why are prices different from face value?</h4>
+                <p class="faq-a">As a secondary market reseller, our prices are determined by market demand and availability. Prices may be higher or lower than the original face value.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">Are the seats guaranteed?</h4>
+                <p class="faq-a">Yes. All seats we sell are 100% guaranteed. If there is any issue with your booking, you will receive a full refund.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">How will I receive my booking confirmation?</h4>
+                <p class="faq-a">You will receive your e-voucher via email within 24-72 hours after payment confirmation.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">What is your refund policy?</h4>
+                <p class="faq-a">All sales are final. Purchases are non-refundable once payment is confirmed. However, you may transfer your seats to another person.</p>
+            </div>
+            <div class="faq-item">
+                <h4 class="faq-q">How can I contact you?</h4>
+                <p class="faq-a">You can reach us at info@australiangp.com. We respond within 24 hours on business days.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section">
+        <div class="contact-inner">
+            <h2 class="section-title">Contact <span class="text-red">Us</span></h2>
+            <p style="color: #888; margin-bottom: 30px;">Questions? We respond within 24 hours.</p>
+            
+            <div class="contact-box">
+                <div class="contact-grid">
+                    <div>
+                        <p class="contact-label">EMAIL</p>
+                        <p class="contact-value">info@australiangp.com</p>
+                    </div>
+                    <div>
+                        <p class="contact-label">BUSINESS ADDRESS</p>
+                        <p class="contact-value">Ondiep 3, 3552EA Utrecht, Netherlands</p>
+                    </div>
+                    <div>
+                        <p class="contact-label">REGISTRATION</p>
+                        <p class="contact-value">KVK: 96783397</p>
+                        <p class="contact-value">VAT: NL005230863B92</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="color: #666; font-size: 0.8rem;">Response time: within 24 hours on business days</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-policies">
+                <div>
+                    <h4>REFUND POLICY</h4>
+                    <p>All sales are final. Purchases are non-refundable once payment is confirmed. Seats may be transferred to another person.</p>
+                </div>
+                <div>
+                    <h4>DELIVERY</h4>
+                    <p>E-vouchers delivered via email within 24-72 hours of payment confirmation.</p>
+                </div>
+                <div>
+                    <h4>PAYMENT</h4>
+                    <p>Secure payment via Bank Transfer, PayPal, or Credit Card (Visa, Mastercard, Amex).</p>
+                </div>
+                <div>
+                    <h4>CONTACT</h4>
+                    <p>Email: info@australiangp.com<br>Response within 24 hours</p>
+                </div>
+            </div>
+            
+            <div class="footer-business">
+                <p><strong>Business Registration:</strong> KVK 96783397 · VAT NL005230863B92</p>
+                <p><strong>Address:</strong> Ondiep 3, 3552EA Utrecht, Netherlands</p>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p class="footer-disclaimer-title">⚠️ IMPORTANT DISCLAIMER</p>
+                <p class="footer-disclaimer-text">
+                    This website is operated by an independent reseller. We are NOT the official seller and are NOT affiliated with Formula 1®, FIA, the Australian Grand Prix Corporation, or any official event organizer. 
+                    All seats are purchased on the secondary market and prices may be significantly higher or lower than the original face value. 
+                    F1®, FORMULA ONE®, FORMULA 1®, FIA FORMULA ONE WORLD CHAMPIONSHIP®, GRAND PRIX® and related marks are trademarks of Formula One Licensing B.V.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <button onclick="openModal('privacy')">Privacy Policy</button>
+                <button onclick="openModal('terms')">Terms & Conditions</button>
+                <button onclick="openModal('refund')">Refund Policy</button>
+            </div>
+
+            <p class="footer-copyright">© 2026 Australian GP · Independent Secondary Market Reseller · All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay">
+        <nav class="cart-nav">
+            <div class="logo">AUSTRALIAN <span class="text-red">GP</span></div>
+            <button class="cart-back" onclick="closeCart()">← Back to seats</button>
+        </nav>
+        <div class="cart-content">
+            <h1 class="cart-title">Your <span class="text-red">Cart</span></h1>
+            <p class="cart-subtitle">Australian Grand Prix 2026 · 5–8 March · Melbourne</p>
+            
+            <div id="cart-empty" class="cart-empty">
+                <p style="color: #555;">Your cart is empty.</p>
+                <button onclick="closeCart()" style="margin-top: 12px; background: none; border: none; color: #E8002D; cursor: pointer;">← Browse seats</button>
+            </div>
+
+            <div id="cart-filled" class="cart-grid" style="display: none;">
+                <div id="cart-items"></div>
+                <div class="cart-summary">
+                    <div class="summary-title">Order Summary</div>
+                    <div id="summary-lines"></div>
+                    <div class="summary-total">
+                        <span class="summary-total-label">Total</span>
+                        <span class="summary-total-price" id="cart-total">€0</span>
+                    </div>
+                    <p class="summary-note">Resale prices · May differ from face value · KVK: 96783397</p>
+                    <button class="checkout-btn" onclick="checkout()">Proceed to Checkout →</button>
+                    <p class="secure-note">🔒 Secure checkout</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal-overlay" id="modal-privacy">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('privacy')">×</button>
+            <h2 class="modal-title">Privacy Policy</h2>
+            <div class="modal-content">
+                <p><strong>Last updated:</strong> January 2025</p>
+                
+                <h3>1. Introduction</h3>
+                <p>Australian GP ("we", "our", "us") operates the website australiangp.com. This Privacy Policy explains how we collect, use, and protect your personal information when you use our services.</p>
+                
+                <h3>2. Information We Collect</h3>
+                <p>We collect the following information when you make a booking:</p>
+                <ul>
+                    <li>Full name</li>
+                    <li>Email address</li>
+                    <li>Phone number</li>
+                    <li>Payment information (processed securely via third-party providers)</li>
+                </ul>
+                
+                <h3>3. How We Use Your Information</h3>
+                <p>We use your information to:</p>
+                <ul>
+                    <li>Process and fulfill your ticket orders</li>
+                    <li>Send booking confirmations and e-vouchers</li>
+                    <li>Communicate about your order status</li>
+                    <li>Respond to customer service inquiries</li>
+                </ul>
+                
+                <h3>4. Data Security</h3>
+                <p>We implement appropriate security measures to protect your personal information. Payment processing is handled by secure third-party providers.</p>
+                
+                <h3>5. Your Rights</h3>
+                <p>Under GDPR, you have the right to access, correct, or delete your personal data. Contact us at info@australiangp.com for any data-related requests.</p>
+                
+                <h3>6. Contact</h3>
+                <p>For privacy-related inquiries: info@australiangp.com</p>
+                <p>Business address: Ondiep 3, 3552EA Utrecht, Netherlands</p>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal('privacy')">Close</button>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal-overlay" id="modal-terms">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('terms')">×</button>
+            <h2 class="modal-title">Terms & Conditions</h2>
+            <div class="modal-content">
+                <p><strong>Last updated:</strong> January 2025</p>
+                
+                <h3>1. About Us</h3>
+                <p>We are an independent reseller operating on the secondary ticket market. We are NOT affiliated with Formula 1®, FIA, the Australian Grand Prix Corporation, or any official event organizer.</p>
+                
+                <h3>2. Pricing</h3>
+                <p>All prices displayed are resale prices determined by market demand and availability. Prices may be higher or lower than the original face value of the tickets.</p>
+                
+                <h3>3. Ticket Delivery</h3>
+                <p>E-vouchers will be delivered via email within 24-72 hours after payment confirmation. These vouchers can be exchanged for physical tickets at the event venue.</p>
+                
+                <h3>4. Seat Guarantee</h3>
+                <p>All seats sold are 100% guaranteed. In the unlikely event we cannot fulfill your order, you will receive a full refund.</p>
+                
+                <h3>5. Refunds & Cancellations</h3>
+                <p>All sales are final. Once payment is confirmed, purchases are non-refundable. Tickets may be transferred to another person at your discretion.</p>
+                
+                <h3>6. Event Changes</h3>
+                <p>We are not responsible for event cancellations, postponements, or changes made by the official organizers. Refund policies for such situations will follow the official organizer's guidelines.</p>
+                
+                <h3>7. Liability</h3>
+                <p>Our liability is limited to the purchase price of the tickets. We are not responsible for travel, accommodation, or other related expenses.</p>
+                
+                <h3>8. Governing Law</h3>
+                <p>These terms are governed by the laws of the Netherlands. Any disputes will be handled in Dutch courts.</p>
+                
+                <h3>9. Contact</h3>
+                <p>Email: info@australiangp.com</p>
+                <p>Address: Ondiep 3, 3552EA Utrecht, Netherlands</p>
+                <p>KVK: 96783397 · VAT: NL005230863B92</p>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal('terms')">Close</button>
+        </div>
+    </div>
+
+    <!-- Refund Policy Modal -->
+    <div class="modal-overlay" id="modal-refund">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('refund')">×</button>
+            <h2 class="modal-title">Refund Policy</h2>
+            <div class="modal-content">
+                <p><strong>Last updated:</strong> January 2025</p>
+                
+                <h3>1. General Policy</h3>
+                <p>All sales are final. Once payment has been confirmed, purchases are non-refundable.</p>
+                
+                <h3>2. Seat Guarantee</h3>
+                <p>If we are unable to deliver the seats you purchased, you will receive a full refund of the purchase price.</p>
+                
+                <h3>3. Event Cancellation</h3>
+                <p>If the event is officially cancelled and not rescheduled, refunds will be processed according to the official organizer's refund policy.</p>
+                
+                <h3>4. Event Postponement</h3>
+                <p>If the event is postponed, your tickets will be valid for the new date. No refunds will be given for postponed events.</p>
+                
+                <h3>5. Transfer Option</h3>
+                <p>While we do not offer refunds for change of mind, you are welcome to transfer your tickets to another person.</p>
+                
+                <h3>6. No Refunds For</h3>
+                <p>No refunds will be given for:</p>
+                <ul>
+                    <li>Change of mind or personal circumstances</li>
+                    <li>Travel disruptions or visa issues</li>
+                    <li>Weather conditions affecting the event</li>
+                    <li>Partial event cancellations (e.g., one day of a multi-day event)</li>
+                </ul>
+                
+                <h3>7. Contact Us</h3>
+                <p>For refund inquiries, please contact us:</p>
+                <p>Email: info@australiangp.com</p>
+                <p>Address: Ondiep 3, 3552EA Utrecht, Netherlands</p>
+            </div>
+            <button class="modal-close-btn" onclick="closeModal('refund')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Cart data
+        let cart = [];
+
+        // Add to cart
+        function addToCart(name, price) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCart();
+            openCart();
+        }
+
+        // Remove from cart
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Change quantity
+        function changeQty(index, delta) {
+            cart[index].qty += delta;
+            if (cart[index].qty <= 0) {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        // Update cart display
+        function updateCart() {
+            const countEl = document.getElementById('cart-count');
+            const emptyEl = document.getElementById('cart-empty');
+            const filledEl = document.getElementById('cart-filled');
+            const itemsEl = document.getElementById('cart-items');
+            const linesEl = document.getElementById('summary-lines');
+            const totalEl = document.getElementById('cart-total');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            countEl.textContent = totalItems;
+
+            if (cart.length === 0) {
+                emptyEl.style.display = 'block';
+                filledEl.style.display = 'none';
+                return;
+            }
+
+            emptyEl.style.display = 'none';
+            filledEl.style.display = 'grid';
+
+            // Render items
+            itemsEl.innerHTML = cart.map((item, i) => `
+                <div class="cart-item">
+                    <div class="cart-item-icon">🎟</div>
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-meta">Australian GP 2026 · €${item.price.toLocaleString()} p.p.</div>
+                        <div class="cart-item-qty">
+                            <button class="qty-btn" onclick="changeQty(${i}, -1)">−</button>
+                            <span style="min-width: 20px; text-align: center;">${item.qty}</span>
+                            <button class="qty-btn" onclick="changeQty(${i}, 1)">+</button>
+                            <button class="remove-btn" onclick="removeFromCart(${i})">✕ Remove</button>
+                        </div>
+                    </div>
+                    <div class="cart-item-total">
+                        <div class="cart-item-price">€${(item.price * item.qty).toLocaleString()}</div>
+                        <div class="cart-item-calc">${item.qty} × €${item.price.toLocaleString()}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render summary lines
+            linesEl.innerHTML = cart.map(item => `
+                <div class="summary-line">
+                    <span class="summary-line-name">${item.name} ×${item.qty}</span>
+                    <span class="summary-line-price">€${(item.price * item.qty).toLocaleString()}</span>
+                </div>
+            `).join('');
+
+            // Total
+            const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            totalEl.textContent = total > 0 ? `€${total.toLocaleString()}` : 'On request';
+        }
+
+        // Open/close cart
+        function openCart() {
+            document.getElementById('cart-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            document.getElementById('cart-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Checkout
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty.');
+                return;
+            }
+            alert('We will contact you via email to complete your order.');
+        }
+
+        // Filter tabs
+        function filterTabs(category, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            // All cards are grandstand, so just show all
+            document.querySelectorAll('.card').forEach(card => card.style.display = 'block');
+        }
+
+        // Modal functions
+        function openModal(type) {
+            document.getElementById('modal-' + type).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(type) {
+            document.getElementById('modal-' + type).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>
